@@ -3,6 +3,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -33,7 +34,10 @@ public class MyController {
 
     }
     @GetMapping("/fragment")
-    public ModelAndView fragmentHandler(){
+    public ModelAndView fragmentHandler(Model model){
+
+        model.addAttribute("title","i like samosa");
+        model.addAttribute("subtitle", LocalDateTime.now().toString());
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("pragment");
         return modelAndView;

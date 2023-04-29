@@ -10,6 +10,6 @@
 <body>
 <h1>This is Fragment</h1>
 
-<footer id="hostTag" th:include="footer::footer1"></footer>
+<footer id="hostTag" th:include="footer::footer1(${title},${subtitle})"></footer>
 </body>
 </html>
