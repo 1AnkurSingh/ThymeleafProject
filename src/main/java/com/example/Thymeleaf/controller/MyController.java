@@ -32,6 +32,13 @@ public class MyController {
         return modelAndView;
 
     }
+    @GetMapping("/fragment")
+    public ModelAndView fragmentHandler(){
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("pragment");
+        return modelAndView;
+
+    }
 
 }
 
