@@ -44,6 +44,19 @@ public class MyController {
 
     }
 
+    @GetMapping("/newAbout")
+    public ModelAndView newAbout(){
+        ModelAndView modelAndView= new ModelAndView();
+        modelAndView.setViewName("aboutnew");
+        return modelAndView;
+    }
+    @GetMapping("/content")
+    public ModelAndView content(){
+        ModelAndView modelAndView= new ModelAndView();
+        modelAndView.setViewName("content");
+        return modelAndView;
+    }
+
 }
 
 
